@@ -80,5 +80,9 @@ def get_number_info():
         payload = {'response': raw, **metadata}
         return jsonify(payload), status
 
+# For local development
 if __name__ == '__main__':
-    SmartEyecone.run(host='0.0.0.0', port=3000, debug=True, threaded=True)
+    SmartEyecone.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+
+# Required by Vercel
+app = SmartEyecone
